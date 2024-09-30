@@ -10,6 +10,10 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -20,7 +24,9 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PYVRSFMDRL');
+    
   </script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -40,105 +46,99 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
-<body>
-
 
 <section class="hero" style="background-color: rgba(0, 0, 0, 0.8);">
   <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="background-container">
-          <div class="video-section"></div>
-            <video autoplay loop muted class="background">
-                <source src="static/videos/teaser.mp4" type="video/mp4">
-            </video>
-            <div class="overlay"></div>
-              <div class="content">
+    <div class="container">
+      <div class="columns">
+        <div class="header-background">
+            <img src="static/images/classification.gif"/>
+            <img src="static/images/counting.gif"/>
+            <img src="static/images/memory.gif"/>
+            <img src="static/images/memory_sequence.gif"/>
+            <img src="static/images/sequence.gif"/>
+            <img src="static/images/sorting.gif"/>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content" style="height: 896px">
+          <h1 class="title is-1 publication-title" style="color: #f2f2f2">Nerfies: Deformable Neural Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span>
+          </div>
 
-                <div class="column has-text-centered">
-                  <h1 class="title is-1 publication-title" style="color: #f2f2f2;">Nerfies: Deformable Neural Radiance Fields</h1>
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">
-                      <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-                    <span class="author-block">
-                      <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-                    <span class="author-block">
-                      <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-                    </span>
-                    <span class="author-block">
-                      <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-                    </span>
-                    <span class="author-block">
-                      <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-                    </span>
-                    <span class="author-block">
-                      <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-                    </span>
-                    <span class="author-block">
-                      <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-                    </span>
-                  </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>University of Washington,</span>
-                    <span class="author-block"><sup>2</sup>Google Research</span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!-- PDF Link. -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2011.12948"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                              <i class="fas fa-file-pdf"></i>
-                          </span>
-                          <span>Paper</span>
-                        </a>
-                      </span>
-                      <span class="link-block">
-                        <a href="https://arxiv.org/abs/2011.12948"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                              <i class="ai ai-arxiv"></i>
-                          </span>
-                          <span>arXiv</span>
-                        </a>
-                      </span>
-                      <!-- Video Link. -->
-                      <span class="link-block">
-                        <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                              <i class="fab fa-youtube"></i>
-                          </span>
-                          <span>Video</span>
-                        </a>
-                      </span>
-                      <!-- Code Link. -->
-                      <span class="link-block">
-                        <a href="https://github.com/google/nerfies"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                              <i class="fab fa-github"></i>
-                          </span>
-                          <span>Code</span>
-                          </a>
-                      </span>
-                      <!-- Dataset Link. -->
-                      <span class="link-block">
-                        <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                              <i class="far fa-images"></i>
-                          </span>
-                          <span>Data</span>
-                          </a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
             </div>
           </div>
         </div>
@@ -147,77 +147,10 @@
   </div>
 </section>
 
-<section class="hero teaser">
+
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -264,7 +197,147 @@
   </div>
 </section>
 
+<section class="section"></section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Environments</h2>
+        <div class="env-grid">
+          <div class="env-container">
+            <img src="static/images/classification_0.png"/>
+            <p>Classification</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/counting_1.png"/>
+            <p>Counting</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/decode_0.png"/>
+            <p>Decode</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/memory_1.png"/>
+            <p>Memory</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/puzzle_0.png"/>
+            <p>Puzzle</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/sequence_0.png"/>
+            <p>Sequence</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/orientation_0.png"/>
+            <p>Orientation</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/sorting_1.png"/>
+            <p>Sorting</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/filling_0.png"/>
+            <p>Filling</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/memory_decode_1.png"/>
+            <p>Memory Decode</p>
+          </div>
+          <div class="env-container">
+            <img src="static/images/memory_sequence_1.png"/>
+            <p>Memory Sequence</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+          <div class="checkboxes" style="display: grid; grid-template-columns: repeat(3, 1fr); ">
+            <label class="checkbox">
+              <input type="checkbox" id="human" value="human" />
+              Human Expert
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="gpt" value="gpt"/>
+              GPT-4o
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="gemini" value="gemini"/>
+              Gemini-v1.5-flesh
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="glm" value="glm"/>
+              GLM4v-9b-chat
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="deepseek" value="deepseek"/>
+              DeepSeek-vl-7b-chat
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="intern" value="intern"/>
+              InternLM-Xcomposer2-7b-chat
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="llava" value="llava"/>
+              Llava-v1.6-Mistral-7b
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="cpm" value="cpm"/>
+              MiniCPM-v2.5-chat
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="qwen" value="qwen"/>
+              Qwen2-vl-7b
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" id="random" value="random"/>
+              Random
+            </label>
+          </div>
+          <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -311,5 +384,194 @@
   </div>
 </footer>
 
-</body>
 </html>
+
+<script>
+  dataset = {
+    'human': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'gpt': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'gemini': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'glm': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'deepseek': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'intern': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'llava': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'cpm': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'qwen': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+    'random': {
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    },
+  }
+
+  const ctx = document.getElementById('myChart');
+  console.log(ctx);
+  
+  const data = {
+    labels: [
+      'Eating',
+      'Drinking',
+      'Sleeping',
+      'Designing',
+      'Coding',
+      'Cycling',
+      'Running'
+    ],
+    datasets: [{
+      label: 'Human Expert',
+      data: [65, 59, 90, 81, 56, 55, 40],
+      fill: true,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgb(255, 99, 132)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
+    }, {
+      label: 'My Second Dataset',
+      data: [38, 48, 40, 29, 96, 27, 100],
+      fill: true,
+      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+      borderColor: 'rgb(54, 162, 235)',
+      pointBackgroundColor: 'rgb(54, 162, 235)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgb(54, 162, 235)'
+    }]
+  };
+  
+  const chart = new Chart(ctx, {
+    type: 'radar',
+    data: data,
+    options: {
+      scales: {
+        r: {
+          min: 20,
+          max: 100,
+          ticks: {
+            stepSize: 10,
+            callback: function(value, index, ticks) {
+              if (value < 50) return value;
+              else return (value - 50) * 0.5 + 50;
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+  
+  allCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+      const selectedCheckboxes = Array.from(allCheckboxes).filter(function(checkbox) {
+        return checkbox.checked;
+      });
+  
+      const selectedDatasets = selectedCheckboxes.map(function(checkbox) {
+        return dataset[checkbox.value];
+      });
+      
+      data.datasets = selectedDatasets;
+      chart.update();
+    });
+  });
+
+
+</script>
